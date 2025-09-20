@@ -2,8 +2,19 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="relative z-40 bg-gradient-to-r from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-sm border-t border-cyan-400/20">
-      <div className="max-w-7xl mx-auto px-8 py-12">
+    <footer className="relative overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+        style={{
+          backgroundImage: 'url(/picai.jpg)',
+          backgroundAttachment: 'fixed'
+        }}
+      ></div>
+      
+      {/* Glass Effect Background */}
+      <div className="relative z-40 backdrop-blur-md border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
@@ -15,7 +26,7 @@ export default function Footer() {
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">METAVERSE</span>
               </span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-md">
+            <p className="text-gray-200 text-sm leading-relaxed max-w-md">
               Step beyond reality into the future of digital experiences.
               Explore, create, and connect in the limitless metaverse.
             </p>
@@ -29,7 +40,7 @@ export default function Footer() {
                 <li key={link}>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    className="text-gray-200 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
                     {link}
                   </a>
@@ -51,7 +62,7 @@ export default function Footer() {
                 <a
                   key={social.name}
                   href="#"
-                  className="w-10 h-10 bg-gradient-to-br from-slate-700/50 to-slate-800/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-gradient-to-br hover:from-cyan-500/20 hover:to-purple-500/20 transition-all duration-300 border border-slate-600/30 hover:border-cyan-400/30"
+                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-200 hover:text-cyan-400 hover:bg-gradient-to-br hover:from-cyan-500/20 hover:to-purple-500/20 transition-all duration-300 border border-white/20 hover:border-cyan-400/50"
                   title={social.name}
                 >
                   <span className="text-lg">{social.icon}</span>
@@ -62,17 +73,18 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-8 pt-8 border-t border-slate-700/50">
+        <div className="mt-8 pt-8 border-t border-white/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-500 text-xs">
+            <p className="text-gray-300 text-xs">
               © 2024 Metaverse Gateway. All rights reserved.
             </p>
-            <div className="flex items-center gap-6 text-xs text-gray-500">
+            <div className="flex items-center gap-6 text-xs text-gray-300">
               <a href="#" className="hover:text-cyan-400 transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-cyan-400 transition-colors">Terms of Service</a>
               <a href="#" className="hover:text-cyan-400 transition-colors">Cookie Policy</a>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </footer>

@@ -6,7 +6,7 @@ export default function About() {
       {/* Background */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-20"
-        style={{ backgroundImage: 'url(/picai.jpg)', backgroundAttachment: 'fixed' }}
+        style={{ backgroundImage: 'url(/vecteezy-ai.jpg)', backgroundAttachment: 'fixed' }}
       />
       <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-fuchsia-500/10 to-emerald-500/10" />
       <div className="absolute -top-20 -left-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" />
@@ -42,7 +42,7 @@ export default function About() {
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-tr from-cyan-500/40 via-purple-500/40 to-pink-500/40 rounded-3xl blur-xl" />
               <div className="relative bg-slate-900/60 border border-white/10 rounded-3xl p-6 backdrop-blur-xl">
-                <img src="/picapp.jpg" alt="Team" className="w-full h-64 md:h-80 object-cover rounded-2xl" />
+                <img src="/vecteezy-ai.jpg" alt="Team" className="w-full h-64 md:h-80 object-cover rounded-2xl" />
                 <div className="grid grid-cols-3 gap-3 mt-4">
                   {["Research","Design","Engineering"].map(tag => (
                     <div key={tag} className="px-3 py-2 rounded-xl bg-white/5 border border-white/10 text-center text-slate-300 text-xs tracking-wide">
